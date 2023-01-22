@@ -2,7 +2,7 @@ FROM python:3.9-slim AS builder
 
 RUN apt-get update && apt-get install -y build-essential
 
-WORKDIR /src
+WORKDIR /home/denero
 
 COPY requirements.txt /src/
 RUN python -m pip wheel -r requirements.txt --wheel-dir /dist
