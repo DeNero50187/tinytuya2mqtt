@@ -10,7 +10,7 @@ RUN python -m pip wheel -r requirements.txt --wheel-dir /dist
 
 FROM python:3.9-slim
 
-WORKDIR /src
+WORKDIR /home/denero
 
 COPY --from=builder /dist /dist
 COPY setup.py requirements.txt README.md /src/
